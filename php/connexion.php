@@ -20,10 +20,10 @@ if(isset($_POST["name"]) && isset($_POST['pass1'])){
         $resultats=$db->query($sql);
         $resultats->setFetchMode(PDO::FETCH_OBJ);
 
-        while( $resultat = $resultats->fetch() )
-        {
-            echo "Bienvenue ".$resultat->nameCharacter." ! ";
-        }
+        $resultat = $resultats->fetch();
+
+        echo "Bienvenue ".$resultat->nameCharacter." ! ";
+
 
     }
     else

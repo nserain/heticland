@@ -1,13 +1,17 @@
 <?php include('connect.php' );
 
 $sql= "SELECT nameUser from users";
-$reponse = $db->prepare($sql);
-$reponse->execute();
-$donnees = $reponse->fetchAll(PDO::FETCH_ASSOC);
+$resultats=$db->query($sql);
+$resultats->setFetchMode(PDO::FETCH_OBJ);
+$exist=false;
+while( $resultat = $resultats->fetch(PDO::FETCH_OBJ) )
+{
+	if($_POST['name'] == $resultat->nameUser ){
+		$exist=true;
+	}
+}
 
-var_dump(in_array($_POST['name'],$donnees));
-
-if(in_array($_POST['name'],$donnees)){
+if($exist){
 	echo "Ce Pseudo existe déjà, Veuillez en choisir un autre!";
 }
 else
@@ -19,11 +23,10 @@ else
 				password
 			) VALUES (
 				'".$_POST['name']."',
-				'".$_POST['pass1']."',
+				'".$_POST['pass1']."'
 			)";
-	$reponse1 = $db->prepare($sqlInsert);
-	$reponse1->execute();
 
+	$db->exec($sqlInsert);
 
 	echo "Vous êtes maintenant inscrit!";
 }
