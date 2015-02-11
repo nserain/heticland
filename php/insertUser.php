@@ -27,7 +27,26 @@ else
 			)";
 
 	$db->exec($sqlInsert);
+		// création du personnage par défaut
+	//récupération de l'id
+	$sqlId="SELECT
+			idUser
+			From
+			users
+			WHERE nameUser='".$_POST['name']."';
+	";
 
-	echo "Vous êtes maintenant inscrit!";
+	$resultats=$db->query($sqlId);
+	$resultats->setFetchMode(PDO::FETCH_OBJ);
+
+	$resultat = $resultats->fetch();
+
+	// création du personnage avec des stats par défaut, avec le nom et l'id
+	$_SESSION['userID']=$resultat->idUser;
+	$sqlInsert = "INSERT INTO characters (nameCharacter, pnj, idRoom, hp, idUser, idAttak, moyenne) VALUES ('".$_POST['name']."', '0', '1', '500', '".$_SESSION['userID']."', '1', '0');";
+	$db->exec($sqlInsert);
+
+	header('Location: ../couloir.html');
+
 }
 
