@@ -1,0 +1,158 @@
+/*CSS*/
+
+
+/*INSCRIPTION ET CONNEXION*/
+
+.container {
+	background: url(../images/connexion/bg_connexion.jpg) no-repeat; 
+ 	background-size: cover; /* version standardisée */
+	height: 100vh;
+	text-align:center;
+}
+
+h1 {
+	text-align: center;
+	padding-bottom: 50px;
+	padding-top: 80px;
+}
+
+.connexion {
+	display:inline-block;
+	width: 500px;
+	background-color: #a5e93e;
+ 	box-shadow: 1px 1px 12px #555;
+	border-radius: 10px;
+	padding:50px 50px;
+}
+.connexion h2 {
+	font-size: 40px;
+	padding-bottom: 35px;
+	font-family: 'Fredoka One', cursive;
+	text-align: center;
+	color: #e04312;
+	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
+}
+
+.connexion label  {
+	display: block;
+	margin:10px 0 5px 0;
+	font: 15px "Open Sans";
+	text-transform:uppercase;
+	color: #e04312;
+}
+
+input {
+	background-color:rgb(198, 234, 144);
+	width:150px;
+	height:20px;
+	border:1px solid rgb(151, 175, 51);
+}
+
+input.submit {
+	background:url(../images/connexion/button_connect.png) no-repeat;
+	background-size:cover;
+	height:35px;
+	width:150px;
+	margin:30px 0 20px 0;
+	font: 17px 'Fredoka One';
+	color:#e04312;
+	text-shadow: #fff 1px 1px, #fff -1px 1px, #fff -1px -1px, #fff 1px -1px;
+	border:none;
+	text-transform:uppercase;
+	background-color:#0BC119;*/
+}
+
+.connexion a {
+	text-decoration: none;
+	font: 16px 'Fredoka One';
+	color:#fff;
+	text-transform:uppercase;
+}
+
+.perso_utilisateur {
+	position:fixed;
+	left:600px;
+	top:350px;
+}
+
+/*FIN INSCRIPTION ET CONNEXION*/
+
+/*SALLE DE CLASSE*/
+.salledeclasse {
+	background: url(../images/salledeclasse/background-savoiretre.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+.salledeclasse .prof {
+	background: url(./img/prof.png) no-repeat;
+	background-size: contain;
+	height: 100vh;
+	margin-top: -50%;
+	margin-left: 15%;
+}
+
+.salledeclasse .cours {
+	position: absolute;
+	top: 100px;
+	left: 815px;
+}
+
+.salledeclasse .cours p {
+	font-family: 'Walter Turncoat', cursive;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.salledeclasse .question {
+	position: absolute;
+	top: 175px;
+	left: 750px	;
+	background: rgba(161, 160, 152, 0.4);
+	width: 500px;
+	height: 300px;
+	border-radius: 10px;
+}
+
+.salledeclasse .ATH {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 310px;
+	height: 60px;
+	background: rgba(161, 160, 152, 0.4);
+	border-radius: 10px;
+}
+
+.salledeclasse .ATH .chapeau {
+	width: 40px;
+	height: 40px;
+	background: url(./img/chapeau.png);
+	margin-top: 3%;
+	margin-left: 7%;
+}
+
+.salledeclasse .ATH .cafe {
+	width: 40px;
+	height: 40px;
+	background: url(./img/cafe.png);
+	margin-left: 30%;
+	margin-top: -12%;
+}
+
+.salledeclasse .ATH .cerveau {
+	width: 40px;
+	height: 40px;
+	background: url(./img/cerveau.png);
+	margin-top: -13%;
+	margin-left: 55%;
+}
+
+.salledeclasse .ATH .eclair {
+	width: 40px;
+	height: 40px;
+	background: url(./img/eclair.png);
+	margin-top: -13%;
+	margin-left: 77%;
+}
+/*FIN SALLE DE CLASSE*/

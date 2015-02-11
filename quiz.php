@@ -8,19 +8,17 @@
 </head>
 <body>
 
-<form method="php/verifyQuiz.php">
+<form action="php/verifQuiz.php" method="post">
     <label> Question 1</label><br/>
     <label>
         <?php
 
             $salle=$_GET['salle']='salle1';
-
-
-            $sql="SELECT question from rooms where nameRoom='$salle'";
+            $sql="SELECT question from rooms where nameRoom='$salle';";
 
             $resultats=$db->query($sql);
             $resultat = $resultats->fetchAll(PDO::FETCH_ASSOC);
-        echo $resultat[0]['question'];
+            echo $resultat[0]['question'];
 
         ?></label><br/>
     <input type="text" name="question1"><br/>
@@ -32,7 +30,7 @@
     <label> Question 3</label><br/>
     <label> <?php echo $resultat[2]['question']; ?></label><br/>
     <input type="text" name="question3"><br/>
-    <input type="hidden" value=<?php $salle ?>>
+    <input type="hidden" name="salle" value='<?php echo $salle ?>'>
     <input type="submit" value="Valdier">
 
 </form>

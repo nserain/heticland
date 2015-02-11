@@ -5,6 +5,7 @@
  * Date: 10/02/2015
  * Time: 13:48
  */
+session_start();
 require('connect.php');
 if(isset($_POST["name"]) && isset($_POST['pass1'])){
     $sql="SELECT idUser FROM users WHERE nameUser='".$_POST["name"]."' and password='".$_POST["pass1"]."';";
@@ -22,7 +23,8 @@ if(isset($_POST["name"]) && isset($_POST['pass1'])){
 
         $resultat = $resultats->fetch();
 
-        echo "Bienvenue ".$resultat->nameCharacter." ! ";
+        $_SESSION['nameCharacter']=$resultat->nameCharacter;
+        header('Location: ../couloir.html');
 
 
     }
