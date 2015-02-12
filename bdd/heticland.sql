@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 12 Février 2015 à 12:43
+-- Généré le :  Jeu 12 Février 2015 à 12:55
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -30,8 +30,7 @@ CREATE TABLE IF NOT EXISTS `attaks` (
   `idAttak` int(11) NOT NULL AUTO_INCREMENT,
   `nameAttak` varchar(100) CHARACTER SET latin1 NOT NULL,
   `damage` int(11) NOT NULL,
-  `heal` int(50) NOT NULL,
-  `speed` int(11) NOT NULL,
+  `owner` varchar(100) NOT NULL,
   PRIMARY KEY (`idAttak`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
@@ -39,11 +38,11 @@ CREATE TABLE IF NOT EXISTS `attaks` (
 -- Contenu de la table `attaks`
 --
 
-INSERT INTO `attaks` (`idAttak`, `nameAttak`, `damage`, `heal`, `speed`) VALUES
-(1, 'YieldManagment', -50, 0, 0),
-(2, 'Freemium ', 20, 0, 0),
-(3, 'attaque1', -100, 0, 0),
-(4, 'attaque2', 50, 0, 0);
+INSERT INTO `attaks` (`idAttak`, `nameAttak`, `damage`, `owner`) VALUES
+(1, 'YieldManagment', -50, 'Carlier'),
+(2, 'Freemium ', 20, 'Carlier'),
+(3, 'attaque1', -100, 'test'),
+(4, 'attaque2', 50, 'test');
 
 -- --------------------------------------------------------
 
