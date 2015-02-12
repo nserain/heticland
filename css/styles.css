@@ -172,16 +172,32 @@ input.submit {
 
 /*DEBUT DUEL*/
 .duel {
-	background: url(../images/salledeclasse/background.jpg) no-repeat;
+	background: url(../images/salledeclasse/bg_combat.jpg) no-repeat;
 	background-size: cover;
 	height: 100vh;
 	position:relative;
 }
-.duel .prof {
-	position:fixed;
-	top:20px;
-	left:80px;
-	height:80%;
+.duel h2 {
+	padding-top:730px;
+	margin-left:250px;
+	font: 50px 'Fredoka One';
+	text-transform:uppercase;
+	color: #e04312;
+	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
+}
+.duel table{
+	position:absolute;
+	bottom:70px;
+	left:100px;
+}
+.duel td a{
+	text-align:center;
+	margin:0 20px;
+}
+.duel td p {
+	font: 20px 'Fredoka One';
+	color: #fff;
+	text-align:center;
 }
 /*FIN DUEL*/
 
