@@ -1,39 +1,97 @@
 <!DOCTYPE html>
-<html>
-<head lang="fr">
-    <meta charset="UTF-8">
-    <title> Quiz</title>
-    <?php include("php/connect.php");?>
-
+<html land="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>HETIC Land</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
+	<?php include('php/connect.php') ?>
+	<script type="text/javascript" src="js/sound-mouseover.js"></script>
 </head>
+
 <body>
+	<div class="salledeclasse">
+		<div class="infos">
 
-<form action="php/verifQuiz.php" method="post">
-    <label> Question 1</label><br/>
-    <label>
-        <?php
+			<table>	
+				<tbody>
+					<tr>
+						<td rowspan="2" class="vide"><a href="javascript:history.go(-1)"><img src="images/infos/retour.png" alt=""></a></td>
+						<td><img src="images/infos/chapeau.png" alt=""></td>
+						<td><img src="images/infos/cafe.png" alt=""></td>
+					</tr>
+					<tr>
+						<!-- <td></td> -->
+						<td>14/20</td>
+						<td>0 café</td>
+					</tr>
+				</tbody>
+			</table>
 
-            $salle=$_GET['salle']='salle1';
-            $sql="SELECT question from rooms where nameRoom='$salle';";
+		</div>
 
-            $resultats=$db->query($sql);
-            $resultat = $resultats->fetchAll(PDO::FETCH_ASSOC);
-            echo $resultat[0]['question'];
+		<div class="titrecours">
 
-        ?></label><br/>
-    <input type="text" name="question1"><br/>
+			<?php
+			$salle=$_GET['salle'];
+			$sql="SELECT distinct nameRoom2 from rooms where nameroom='$salle'";
+			$resultats=$db->query($sql);
+			$resultats->setFetchMode(PDO::FETCH_OBJ);
+			$resultat = $resultats->fetch();
+			echo $resultat->nameRoom2;
+			?>
 
-    <label> Question 2</label><br/>
-    <label> <?php echo $resultat[1]['question']; ?></label><br/>
-    <input type="text" name="question2"><br/>
+		</div>
 
-    <label> Question 3</label><br/>
-    <label> <?php echo $resultat[2]['question']; ?></label><br/>
-    <input type="text" name="question3"><br/>
-    <input type="hidden" name="salle" value='<?php echo $salle ?>'>
-    <input type="submit" value="Valdier">
+		<div class="formulaire">
+			<form action="php/verifQuiz.php" method="post">
+		<ul>
+			<li>
+				<label for="pass">
+					<?php
 
-</form>
 
+					$sql="SELECT question from rooms where nameRoom='$salle';";
+
+					$resultats=$db->query($sql);
+					$resultat = $resultats->fetchAll(PDO::FETCH_ASSOC);
+					echo $resultat[0]['question'];
+
+					?>
+
+
+				</label><br>
+				<input type="text" name="question1" id="pass" />
+			</li>
+			<li>
+				<label for="pass"><?php echo $resultat[1]['question']; ?></label><br>
+				<input type="text" name="question2" id="pass" />
+			</li>
+			<li>
+				<label for="pass"><?php echo $resultat[2]['question']; ?></label><br>
+				<input type="text" name="question3" id="pass" />
+			</li>
+			<input type="hidden" name="salle" value='<?php echo $salle ?>'>
+			<li>
+				<input type="submit" class="submit">
+			</li>
+		</ul>
+			</form>
+		</div>
+
+		<img src="
+
+		<?php $sql="SELECT distinct imageProf from rooms where nameroom='$salle'";
+		$resultats=$db->query($sql);
+		$resultats->setFetchMode(PDO::FETCH_OBJ);
+		$resultat = $resultats->fetch();
+		echo $resultat->imageProf;
+		?>
+		" alt="prof" class="prof">
+
+	</div>
 </body>
 </html>

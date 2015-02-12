@@ -19,7 +19,6 @@ $sql="SELECT answer from rooms where nameRoom='$salle'";
 
 $resultats=$db->query($sql);
 $resultat = $resultats->fetchAll(PDO::FETCH_ASSOC);
-var_dump($resultats);
 $answer1 = $resultat[0]['answer'];
 $answer2 = $resultat[1]['answer'];
 $answer3 = $resultat[2]['answer'];

@@ -13,12 +13,12 @@ if(isset($_POST["name"]) && isset($_POST['pass1'])){
     $resultats=$db->query($sql);
     $resultats->setFetchMode(PDO::FETCH_OBJ);
     $resultat = $resultats->fetch();
-var_dump($resultat);
+
 
 
     if($resultat==false){
         echo "Ce compte n'existe pas encore";
-        header('Location: ../index.html');
+        header('Location: ../nologin.php');
     }
     else
     {
@@ -30,12 +30,9 @@ var_dump($resultat);
         $resultat = $resultats->fetch();
 
         $_SESSION['nameCharacter']=$resultat->nameCharacter;
-        header('Location: ../couloir.html');
+        header('Location: ../couloir.php');
 
 
     }
 
-} else
-{
-    echo "Veuillez réessayer";
 }

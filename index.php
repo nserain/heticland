@@ -14,7 +14,7 @@
 <body>
 	<div class="container">	
 		<header>
-			<h1><img src="images/connexion/logo_heticland.png" alt="logo_heticland"></h1>
+			<h1><a href="index.php"><img src="images/connexion/logo_heticland.png" alt="logo_heticland"></a></h1>
 		</header>
 
 		<div class="connexion">
@@ -28,7 +28,7 @@
 				</p>
 					<input type="submit" value="Jouer" class="submit"/>
 				<br/>
-					<a href="signin.html">S'inscrire</a>
+					<a href="signin.php">S'inscrire</a>
 				</form>
 		</div>
 		<div class="perso_utilisateur"><img src="images/connexion/perso_utilisateur.png" alt=""></div>
