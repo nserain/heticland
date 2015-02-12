@@ -12,7 +12,7 @@ while( $resultat = $resultats->fetch(PDO::FETCH_OBJ) )
 }
 
 if($exist){
-	echo "Ce Pseudo existe déjà, Veuillez en choisir un autre!";
+	header('Location: ../userexist.php');
 }
 else
 {
@@ -46,7 +46,7 @@ else
 	$sqlInsert = "INSERT INTO characters (nameCharacter, pnj, idRoom, hp, idUser, idAttak, moyenne) VALUES ('".$_POST['name']."', '0', '1', '500', '".$_SESSION['userID']."', '1', '0');";
 	$db->exec($sqlInsert);
 
-	header('Location: ../couloir.html');
+	header('Location: ../welcome.php');
 
 }
 

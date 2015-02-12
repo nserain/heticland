@@ -1,38 +1,38 @@
 /*CSS*/
 
-
 /*INSCRIPTION ET CONNEXION*/
-
 .container {
 	background: url(../images/connexion/bg_connexion.jpg) no-repeat; 
  	background-size: cover; /* version standardisée */
 	height: 100vh;
 	text-align:center;
 }
-
 h1 {
 	text-align: center;
-	padding-bottom: 50px;
-	padding-top: 80px;
+	padding:80px 0 50px 0;
 }
-
 .connexion {
 	display:inline-block;
 	width: 500px;
+	padding:50px 50px;
 	background-color: #a5e93e;
  	box-shadow: 1px 1px 12px #555;
 	border-radius: 10px;
-	padding:50px 50px;
 }
 .connexion h2 {
-	font-size: 40px;
 	padding-bottom: 35px;
-	font-family: 'Fredoka One', cursive;
+	font: 40px 'Fredoka One', cursive;
 	text-align: center;
 	color: #e04312;
 	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
 }
-
+.connexion h3 {
+	padding:0 20px 35px 20px;
+	font: 25px 'Fredoka One', cursive;
+	text-align: center;
+	color: #e04312;
+	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
+}
 .connexion label  {
 	display: block;
 	margin:10px 0 5px 0;
@@ -40,14 +40,12 @@ h1 {
 	text-transform:uppercase;
 	color: #e04312;
 }
-
 input {
 	background-color:rgb(198, 234, 144);
 	width:150px;
 	height:20px;
 	border:1px solid rgb(151, 175, 51);
 }
-
 input.submit {
 	background:url(../images/connexion/button_connect.png) no-repeat;
 	background-size:cover;
@@ -61,21 +59,41 @@ input.submit {
 	text-transform:uppercase;
 	background-color:#0BC119;*/
 }
-
 .connexion a {
 	text-decoration: none;
+	text-transform:uppercase;
 	font: 16px 'Fredoka One';
 	color:#fff;
-	text-transform:uppercase;
 }
-
 .perso_utilisateur {
 	position:fixed;
 	left:600px;
 	top:350px;
 }
-
 /*FIN INSCRIPTION ET CONNEXION*/
+
+/*DEBUT WELCOME*/
+.welcome {
+	background: url(../images/connexion/bg_brontis.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.speech {
+	/*padding:550px 610px 0 620px;*/
+	padding:30% 33% 1.5% 34%;
+	color:#fff;
+}
+.play a{
+	padding:2.5% 33% 0 45%;
+	color:#e04312;
+	font:20px 'Fredoka one';
+	text-shadow: #fff 1px 1px, #fff -1px 1px, #fff -1px -1px, #fff 1px -1px;
+	text-decoration:none;
+}
+
+/*FIN WELCOME*/
+
 
 /*SALLE DE CLASSE*/
 .salledeclasse {
@@ -84,31 +102,15 @@ input.submit {
 	height: 100vh;
 	position:relative;
 }
-
-.salledeclasse header {
-	padding:20px 50px 0 0;
-	background-color: rgba(0, 0, 0, 0.4);
-	height:60px;
-}
-
-.salledeclasse header ul li{
-	display:inline-block;
-	float:right;
-	margin:0 15px;
-
-}
-
 .titrecours {
+	padding:150px 0 30px 0;
 	font: 28px 'Fredoka One';
 	text-transform:uppercase;
 	text-align:center;
-	padding:80px 0 30px 0;
 }
-
 .salledeclasse .formulaire ul li{
 	text-align:center;
 }
-
 .salledeclasse .formulaire label {
 	font:16px 'Open Sans';
 }
@@ -123,7 +125,6 @@ input.submit {
 	margin-top:20px;
 	height:45px;
 }
-
 .salledeclasse .prof {
 	position:fixed;
 	top:200px;
@@ -132,15 +133,82 @@ input.submit {
 }
 /*FIN SALLE DE CLASSE*/
 
+
+/*INFOS*/
 .infos {
-	padding:20px 50px 0 0;
-	background-color: rgba(0, 0, 0, 0.4);
-	height:60px;
+	position:absolute;
+	right:0px;
+	margin:20px 50px 0 0;
+	z-index:9999;
 }
-
-.infos ul li{
-	display:inline-block;
-	float:right;
-	margin:0 15px;
-
+.infos h2{
+	padding-bottom:10px;
+	font: 20px 'Fredoka One';
+	background-color:none;
+	color: #e04312;
+	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
 }
+.infos th {
+	margin-top:20px;
+	padding-bottom:30px;
+	font: 20px 'Fredoka One';
+	background-color:none;
+	text-align: center;
+	color: #e04312;
+	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
+}
+.infos tbody{
+	background-color:rgba(255, 255, 255, 0.3);
+}
+.infos tr td{
+	width:50px;
+	padding:15px 15px;
+	text-align:center;
+	font: 15px 'Fredoka One';
+	color:rgb(151, 175, 51);
+}
+/*FIN INFOS*/
+
+
+/*DEBUT DUEL*/
+.duel {
+	background: url(../images/salledeclasse/background.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.duel .prof {
+	position:fixed;
+	top:20px;
+	left:80px;
+	height:80%;
+}
+/*FIN DUEL*/
+
+
+/*GAME OVER*/
+.gameover {
+	background: url(../images/connexion/bg_gameover.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+#hihihi {
+	margin-top:155px;
+}
+@-webkit-keyframes yannhihi {
+  0% {
+    margin-top:155px;
+	margin-left:-350px;
+  }
+  100%{
+    margin-top:155px;
+	margin-left:0;
+  }
+}
+        
+
+#hihihi{
+  -webkit-animation: yannhihi 3s ease-in-out;
+}
+/*FIN GAME OVER*/

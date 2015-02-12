@@ -103,6 +103,85 @@ var audio = document.getElementById("php"); audio.play();
 }
 }
 
+
+function playclip6() {
+if (navigator.appName == "Chrome") {
+if (document.all)
+ {
+  document.all.sound.src = "click.wav";
+ }
+}
+
+else {
+{
+var audio = document.getElementById("daniel"); audio.play(); 
+}
+}
+}
+
+
+function playclip7() {
+if (navigator.appName == "Chrome") {
+if (document.all)
+ {
+  document.all.sound.src = "click.wav";
+ }
+}
+
+else {
+{
+var audio = document.getElementById("wc"); audio.play(); 
+}
+}
+}
+
+
+function playclip8() {
+if (navigator.appName == "Chrome") {
+if (document.all)
+ {
+  document.all.sound.src = "click.wav";
+ }
+}
+
+else {
+{
+var audio = document.getElementById("brontis"); audio.play(); 
+}
+}
+}
+
+function playclip9() {
+if (navigator.appName == "Chrome") {
+if (document.all)
+ {
+  document.all.sound.src = "click.wav";
+ }
+}
+
+else {
+{
+var audio = document.getElementById("dory"); audio.play(); 
+}
+}
+}
+
+
+
+function playclip10() {
+if (navigator.appName == "Chrome") {
+if (document.all)
+ {
+  document.all.sound.src = "click.wav";
+ }
+}
+
+else {
+{
+var audio = document.getElementById("hihiyann"); audio.play(); 
+}
+}
+}
 //-->
 
 

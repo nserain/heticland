@@ -25,16 +25,13 @@ div.scrollingHotSpotLeft {
 	position: absolute;
 	z-index: 200;
 	left: 0;
-	cursor: url(../images/cursors/cursor_arrow_left.png) w-resize;
 }
 
 /* Visible left hotspot */
-div.scrollingHotSpotLeftVisible
-{
-	background-image: url(../images/arrow_left.gif);				
-	background-color: #fff;
+div.scrollingHotSpotLeftVisible {
+	background-image: url(../images/arrow_left.png);			
 	background-repeat: no-repeat;
-	opacity: 0.35;
+	opacity: 0;
 	zoom: 1;
 }
 
@@ -48,15 +45,13 @@ div.scrollingHotSpotRight {
 	position: absolute;
 	z-index: 200;
 	right: 0;
-	cursor: url(../images/cursors/cursor_arrow_right.png) e-resize;
 }
 
 /* Visible right hotspot */
 div.scrollingHotSpotRightVisible {
-	background-image: url(../images/arrow_right.gif);
-	background-color: #fff;
+	background-image: url(../images/arrow_right.png);
 	background-repeat: no-repeat;
-	opacity: 0.35;
+	opacity: 0;
 	filter: alpha(opacity = 35);
 	-moz-opacity: 0.35;
 	zoom: 1;
@@ -68,9 +63,7 @@ div.scrollWrapper {
 	height: 100%;
 }
 div.scrollableArea {
-	/*position: relative;*/
 	width: auto;
-	/*height: 100%;*/
 }
 #makeMeScrollable img {
 	height:100vh;
@@ -80,7 +73,7 @@ div.scrollableArea {
 	position:fixed;
 }
 
-#makeMeScrollable .personnage #perso{
+#makeMeScrollable .personnage #img-perso{
 	height:60%;
 	margin-left:10%;
 	padding-top:18%;

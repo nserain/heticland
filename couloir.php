@@ -1,5 +1,4 @@
-<?php include('php/connexion.php');
-include('php/connect.php');
+<?php include('php/connexion.php'); 
 
 if (!$_SESSION) {
 	header('Location: index.php');
@@ -83,9 +82,9 @@ if (!$_SESSION) {
 
 				<img src="images/couloir/img14.jpg" alt="deco" id="img-deco5" />
 
-			<a href="daniel.php" onmouseover="playclip6();">
-				<img src="images/couloir/img15.jpg" alt="daniel" id="img-daniel" onmouseout="javascript:this.src='images/couloir/img15.jpg';" onmouseover="javascript:this.src='images/couloir/img15-hover.gif';"/>
-			</a>
+			<!-- <a href="daniel.php" onmouseover="playclip6();"> -->
+				<img src="images/couloir/img15.jpg" alt="daniel" id="img-daniel" onmouseout="javascript:this.src='images/couloir/img15.jpg';" onmouseover="javascript:this.src='images/couloir/img15-hover.gif'; playclip6();"/>
+			<!-- </a> -->
 
 			<div class="personnage">
 				<img src="images/personnage2.png" alt="" id="img-perso">
@@ -99,6 +98,7 @@ if (!$_SESSION) {
 		<audio id="algo"><source src="sons/algo.mp3"></source></audio>
 		<audio id="php"><source src="sons/php.mp3"></source></audio>
 		<audio id="daniel"><source src="sons/daniel.mp3"></source></audio>
+		<audio id="brontis"><source src="sons/brontis.mp3"></source></audio>
 		<div id="sounddiv"><bgsound id="sound"></div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>

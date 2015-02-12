@@ -13,7 +13,7 @@ if(isset($_POST["name"]) && isset($_POST['pass1'])){
     $resultats=$db->query($sql);
     $resultats->setFetchMode(PDO::FETCH_OBJ);
     $resultat = $resultats->fetch();
-
+    var_dump($resultat);
 
 
     if($resultat==false){
@@ -30,9 +30,13 @@ if(isset($_POST["name"]) && isset($_POST['pass1'])){
         $resultat = $resultats->fetch();
 
         $_SESSION['nameCharacter']=$resultat->nameCharacter;
-        header('Location: ../couloir.php');
+        header('Location: ../welcome.php');
 
 
     }
 
 }
+// } else
+// {
+//     echo "Veuillez réessayer";
+// }
