@@ -107,7 +107,7 @@
 				.done( function( data ){
 					var zoneCombat = $( '#texteCombat' ).val(data);
 					var split = data.split('=');
-					
+
 					console.log(hpUser);
 					document.getElementById('hpUser2').innerHTML = hpUser;
 					hpUser = split[0];

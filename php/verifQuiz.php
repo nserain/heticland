@@ -56,3 +56,5 @@ if($good>=2){
     $resultat = $resultats->fetch(PDO::FETCH_OBJ);
     echo $resultat->hp. ' hp';
 }
+
+header('Location: ../duel.php?nbAnswers='.$good.'&salle='.$salle.'');

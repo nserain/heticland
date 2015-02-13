@@ -139,7 +139,7 @@ input.submit {
 	position:absolute;
 	right:0px;
 	margin:20px 50px 0 0;
-	z-index:9999;
+	z-index:999;
 }
 .infos h2{
 	padding-bottom:10px;
@@ -169,14 +169,109 @@ input.submit {
 }
 /*FIN INFOS*/
 
+/*MODAL*/
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 700px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #a5e93e;
+ 	box-shadow: 1px 1px 12px #555;
+}
+
+.modalDialog p {
+	margin:20px 0;
+	font: 22px 'Fredoka One';
+	color: #e04312;
+	text-shadow: #fff 1px 1px, #fff -1px 1px, #fff -1px -1px, #fff 1px -1px;
+	text-align:center;
+}
+
+.close {
+	display:block;
+	background:url(../images/connexion/button_connect.png) no-repeat;
+	background-size:cover;
+	height:35px;
+	width:150px;
+	padding:15px 0 0 10px;
+	margin:0 auto;
+	font: 17px 'Fredoka One';
+	color:#e04312;
+	text-shadow: #fff 1px 1px, #fff -1px 1px, #fff -1px -1px, #fff 1px -1px;
+	border:none;
+	text-decoration:none;
+	text-transform:uppercase;
+	text-align:center;
+}
+
+.modalDialog .gifduel {
+	display:block;
+	margin:0 auto;
+	padding-bottom:20px;
+}
+/*FIN MODAL*/
+
 
 /*DEBUT DUEL*/
-.duel {
-	background: url(../images/salledeclasse/bg_combat.jpg) no-repeat;
+.photoshop {
+	background: url(../images/salledeclasse/combat_photoshop.jpg) no-repeat;
 	background-size: cover;
 	height: 100vh;
 	position:relative;
 }
+.php {
+	background: url(../images/salledeclasse/combat_php.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.savoiretre {
+	background: url(../images/salledeclasse/combat_savoiretre.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.htmlcss {
+	background: url(../images/salledeclasse/combat_htmlcss.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.javascript {
+	background: url(../images/salledeclasse/combat_javascript.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.algo {
+	background: url(../images/salledeclasse/combat_algo.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+
+
 .duel h2 {
 	padding-top:730px;
 	margin-left:250px;
@@ -228,3 +323,12 @@ input.submit {
   -webkit-animation: yannhihi 3s ease-in-out;
 }
 /*FIN GAME OVER*/
+
+/*VICTOIRE*/
+.victoire {
+	background: url(../images/connexion/bg_victoire.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+/*FIN VICTOIRE*/
